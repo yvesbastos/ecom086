@@ -1,4 +1,4 @@
-update=Quarta Feira, 15 '15e' Fevereiro '15e' 2017 18:23:06
+update=Quarta Feira, 15 '15e' Fevereiro '15e' 2017 19:06:19
 version=1
 last_client=eeschema
 [general]
