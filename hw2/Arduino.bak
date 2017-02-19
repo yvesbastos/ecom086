@@ -28,10 +28,9 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:usb-a-pcb
-LIBS:NorBot
-LIBS:cvra
 LIBS:_connectors
+LIBS:cvra
+LIBS:ATMEGA32U4-AU
 LIBS:_antenna
 LIBS:_audio
 LIBS:_charge-pump-regulators
@@ -51,16 +50,17 @@ LIBS:logo
 LIBS:Mec
 LIBS:National
 LIBS:phoenix
+LIBS:NorBot
 LIBS:Arduino-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "ECOM086 - HW 2"
 Date ""
 Rev ""
-Comp ""
+Comp "Yves Bastos"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -759,19 +759,17 @@ Wire Wire Line
 Wire Wire Line
 	9350 4700 9550 4700
 Wire Wire Line
-	4500 4950 4750 4950
+	4750 6200 4750 4700
 Wire Wire Line
-	4750 4950 4750 4700
+	4900 5100 5200 5100
 Wire Wire Line
-	4500 5100 5200 5100
-Wire Wire Line
-	4500 5350 5200 5350
+	5000 5350 5200 5350
 Wire Wire Line
 	5500 5100 5600 5100
 Wire Wire Line
 	5500 5350 5650 5350
 Wire Wire Line
-	4500 5550 5900 5550
+	5400 5550 5900 5550
 Wire Wire Line
 	1900 4950 2050 4950
 Wire Wire Line
@@ -873,19 +871,6 @@ F 3 "" H 5900 5550 50  0000 C CNN
 	1    5900 5550
 	1    0    0    -1  
 $EndComp
-$Comp
-L USB-A-PCB P4
-U 1 1 58A65FC7
-P 4100 5250
-F 0 "P4" H 4100 5700 60  0000 C CNN
-F 1 "USB-A-PCB" H 4200 4750 60  0000 C CNN
-F 2 "Connectors:USB_A" H 4100 5250 60  0001 C CNN
-F 3 "" H 4100 5250 60  0001 C CNN
-	1    4100 5250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4500 5100 4500 5150
 Wire Wire Line
 	4850 4750 4850 4700
 Wire Wire Line
@@ -1022,4 +1007,34 @@ Text Label 6900 1800 0    60   ~ 0
 UVCC
 Text Label 4900 3300 0    60   ~ 0
 UVCC
+$Comp
+L MICRO_USB CONN?
+U 1 1 58A8FD50
+P 3950 6350
+F 0 "CONN?" H 3950 6750 60  0000 C CNN
+F 1 "MICRO_USB" H 4000 5950 60  0000 C CNN
+F 2 "" H 3950 6350 60  0000 C CNN
+F 3 "" H 3950 6350 60  0000 C CNN
+	1    3950 6350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4300 6400 4900 6400
+Wire Wire Line
+	4900 6400 4900 5100
+Connection ~ 4900 5100
+Wire Wire Line
+	4300 6500 5000 6500
+Wire Wire Line
+	5000 6500 5000 5350
+Connection ~ 5000 5350
+Wire Wire Line
+	4300 6600 5400 6600
+Wire Wire Line
+	5400 6600 5400 5550
+Connection ~ 5400 5550
+Wire Wire Line
+	4300 6200 4750 6200
+NoConn ~ 4300 6100
+NoConn ~ 4300 6300
 $EndSCHEMATC
