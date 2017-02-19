@@ -1,0 +1,221 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:circuito1-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "HelloWorld"
+Date "2017-02-04"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM555N U1
+U 1 1 5895CF81
+P 8400 1700
+F 0 "U1" H 8000 2050 50  0000 L CNN
+F 1 "LM555N" H 8000 1350 50  0000 L CNN
+F 2 "SMD_Packages:SOIC-8-N" H 8400 1700 50  0001 C CNN
+F 3 "" H 8400 1700 50  0000 C CNN
+	1    8400 1700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7900 1700
+$Comp
+L R R2
+U 1 1 5895D516
+P 9200 1500
+F 0 "R2" V 9280 1500 50  0000 C CNN
+F 1 "1K" V 9200 1500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9130 1500 50  0001 C CNN
+F 3 "" H 9200 1500 50  0000 C CNN
+	1    9200 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 5895D59D
+P 9200 1900
+F 0 "R3" V 9280 1900 50  0000 C CNN
+F 1 "470K" V 9200 1900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9130 1900 50  0001 C CNN
+F 3 "" H 9200 1900 50  0000 C CNN
+	1    9200 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 5895D64A
+P 8550 2200
+F 0 "R1" V 8630 2200 50  0000 C CNN
+F 1 "1K" V 8550 2200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8480 2200 50  0001 C CNN
+F 3 "" H 8550 2200 50  0000 C CNN
+	1    8550 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L C C1
+U 1 1 5895D6AE
+P 10150 2100
+F 0 "C1" H 10175 2200 50  0000 L CNN
+F 1 "C" H 10175 2000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10188 1950 50  0001 C CNN
+F 3 "" H 10150 2100 50  0000 C CNN
+	1    10150 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 5895D759
+P 9700 1500
+F 0 "D1" H 9700 1600 50  0000 C CNN
+F 1 "LED" H 9700 1400 50  0000 C CNN
+F 2 "LEDs:LED_0603" H 9700 1500 50  0001 C CNN
+F 3 "" H 9700 1500 50  0000 C CNN
+	1    9700 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9550 1500 9350 1500
+Wire Wire Line
+	9050 1500 8900 1500
+Wire Wire Line
+	8900 1900 9050 1900
+Wire Wire Line
+	8900 1700 9600 1700
+Wire Wire Line
+	9600 1700 9600 2200
+Wire Wire Line
+	9600 2200 8700 2200
+$Comp
+L CONN_01X02 P1
+U 1 1 5895D83B
+P 8850 2800
+F 0 "P1" H 8850 2950 50  0000 C CNN
+F 1 "CONN_01X02" V 8950 2800 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch1.27mm" H 8850 2800 50  0001 C CNN
+F 3 "" H 8850 2800 50  0000 C CNN
+	1    8850 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VCC #PWR01
+U 1 1 5895D8D6
+P 8800 3350
+F 0 "#PWR01" H 8800 3200 50  0001 C CNN
+F 1 "VCC" H 8800 3500 50  0000 C CNN
+F 2 "" H 8800 3350 50  0000 C CNN
+F 3 "" H 8800 3350 50  0000 C CNN
+	1    8800 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5895D8F8
+P 8900 3350
+F 0 "#PWR02" H 8900 3100 50  0001 C CNN
+F 1 "GND" H 8900 3200 50  0000 C CNN
+F 2 "" H 8900 3350 50  0000 C CNN
+F 3 "" H 8900 3350 50  0000 C CNN
+	1    8900 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 5895D91A
+P 9200 3200
+F 0 "#FLG03" H 9200 3295 50  0001 C CNN
+F 1 "PWR_FLAG" H 9200 3380 50  0000 C CNN
+F 2 "" H 9200 3200 50  0000 C CNN
+F 3 "" H 9200 3200 50  0000 C CNN
+	1    9200 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 5895D941
+P 8450 3200
+F 0 "#FLG04" H 8450 3295 50  0001 C CNN
+F 1 "PWR_FLAG" H 8450 3380 50  0000 C CNN
+F 2 "" H 8450 3200 50  0000 C CNN
+F 3 "" H 8450 3200 50  0000 C CNN
+	1    8450 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8800 3000 8800 3350
+Wire Wire Line
+	8900 3000 8900 3350
+Wire Wire Line
+	8450 3200 8800 3200
+Connection ~ 8800 3200
+Wire Wire Line
+	9200 3200 8900 3200
+Connection ~ 8900 3200
+Wire Wire Line
+	7900 1900 7900 2400
+Wire Wire Line
+	7900 2200 8400 2200
+Text Label 7900 2400 2    60   ~ 0
+VCC
+Connection ~ 7900 2200
+Wire Wire Line
+	9350 1900 9600 1900
+Connection ~ 9600 1900
+Wire Wire Line
+	8950 2100 10000 2100
+Wire Wire Line
+	8950 2100 8950 1900
+Connection ~ 8950 1900
+Text Label 10500 2400 0    60   ~ 0
+GND
+Wire Wire Line
+	9850 1500 10500 1500
+Wire Wire Line
+	10500 1500 10500 2400
+Wire Wire Line
+	10300 2100 10500 2100
+Connection ~ 10500 2100
+Wire Wire Line
+	7900 1500 7900 1150
+Wire Wire Line
+	7900 1150 9950 1150
+Wire Wire Line
+	9950 1150 9950 2100
+Connection ~ 9950 2100
+$EndSCHEMATC
